@@ -106,7 +106,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("Elsa is on Buggy car App Registration page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
- testRunner.And("fill username lui01", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("fill username lui000", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 8
  testRunner.And("fill firstname Elsa", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -121,7 +121,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("set confirm password Elsa1234%", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
- testRunner.When("click on Register button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("click on Register button by valid details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 13
  testRunner.Then("see prompt message: Registration is successful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

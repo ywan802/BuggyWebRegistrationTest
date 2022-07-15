@@ -35,10 +35,10 @@ namespace BuggyWebRegistrationTest.Steps
             driver.FindElement(By.LinkText("Register")).Click();
         }
 
-        [Given(@"fill username lui00")]
+        [Given(@"fill username lui000")]
         public void GivenFillUsernameLui0()
         {
-            driver.FindElement(By.Id("username")).SendKeys("lui00");
+            driver.FindElement(By.Id("username")).SendKeys("lui000");
 
             System.Threading.Thread.Sleep(2000);
         }
@@ -75,8 +75,8 @@ namespace BuggyWebRegistrationTest.Steps
             System.Threading.Thread.Sleep(2000);
         }
 
-        [When(@"click on Register button")]
-        public void WhenClickOnRegisterButton()
+        [When(@"click on Register button by valid details")]
+        public void WhenClickOnRegisterButtonByValidDetails()
         {
             driver.FindElement(By.XPath("//div/div/form/button")).Click();
 

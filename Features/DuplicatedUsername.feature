@@ -9,5 +9,5 @@ Scenario: User can only register once
 	And fill lastname Lee
 	And set password Alice123%  
 	And set confirm password Alice123%  
-	When click Register button
+	When click Register button by duplicated username
 	Then see an error prompt message: UsernameExistsException: User already exists

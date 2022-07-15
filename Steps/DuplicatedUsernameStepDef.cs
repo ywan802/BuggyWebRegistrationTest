@@ -74,8 +74,8 @@ namespace BuggyWebRegistrationTest.Steps
             System.Threading.Thread.Sleep(2000);
         }
 
-        [When(@"click Register button")]
-        public void WhenClickRegisterButton()
+        [When(@"click Register button by duplicated username")]
+        public void WhenClickRegisterButtonByDuplicatedUsername()
         {
             driver.FindElement(By.XPath("//div/div/form/button")).Click();
 
