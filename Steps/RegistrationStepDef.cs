@@ -35,10 +35,10 @@ namespace BuggyWebRegistrationTest.Steps
             driver.FindElement(By.LinkText("Register")).Click();
         }
 
-        [Given(@"fill username lui0")]
+        [Given(@"fill username lui00")]
         public void GivenFillUsernameLui0()
         {
-            driver.FindElement(By.Id("username")).SendKeys("lui0");
+            driver.FindElement(By.Id("username")).SendKeys("lui00");
 
             System.Threading.Thread.Sleep(2000);
         }
