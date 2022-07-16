@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -22,7 +23,20 @@ namespace BuggyWebRegistrationTest.Drivers
 
 		public IWebDriver Setup()
 		{
-			driver = new ChromeDriver("C:/Users/ywan802/OneDrive - The University of Auckland/Desktop/technique test/BuggyWebRegistrationTest/Drivers/");
+			/*
+			driver = new ChromeDriver("paste the chromedriver.exe full path here");
+
+			//set the driver
+			_scenarioContext.Set(driver, "WebDriver");
+
+			driver.Manage().Window.Maximize();
+
+			return driver;
+			*/
+
+
+			//Firefox paste the gekodriver.exe full path here
+			driver = new FirefoxDriver("C:/Users/ywan802/OneDrive - The University of Auckland/Desktop/technique test/BuggyWebRegistrationTest/Drivers/");
 
 			//set the driver
 			_scenarioContext.Set(driver, "WebDriver");

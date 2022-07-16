@@ -4,7 +4,7 @@
 @RegisterSuccessful
 Scenario: User successfully creates a new account
 	Given Elsa is on Buggy car App Registration page
-	And fill username lui000
+	And fill username lui0000
 	And fill firstname Elsa 
 	And fill lastname Lui
 	And set password Elsa1234%
