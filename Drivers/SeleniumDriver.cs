@@ -23,7 +23,7 @@ namespace BuggyWebRegistrationTest.Drivers
 
 		public IWebDriver Setup()
 		{
-			/*
+			
 			driver = new ChromeDriver("paste the chromedriver.exe full path here");
 
 			//set the driver
@@ -32,11 +32,11 @@ namespace BuggyWebRegistrationTest.Drivers
 			driver.Manage().Window.Maximize();
 
 			return driver;
-			*/
+			
 
-
-			//Firefox paste the gekodriver.exe full path here
-			driver = new FirefoxDriver("C:/Users/ywan802/OneDrive - The University of Auckland/Desktop/technique test/BuggyWebRegistrationTest/Drivers/");
+			/*
+			//Firefox 
+			driver = new FirefoxDriver("paste the gekodriver.exe full path here");
 
 			//set the driver
 			_scenarioContext.Set(driver, "WebDriver");
@@ -44,6 +44,7 @@ namespace BuggyWebRegistrationTest.Drivers
 			driver.Manage().Window.Maximize();
 
 			return driver;
+			*/
 		}
 	}
 }
