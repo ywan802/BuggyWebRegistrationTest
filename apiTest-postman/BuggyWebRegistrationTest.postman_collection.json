@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "c1c786a3-ca2e-456e-ab84-888d75547ed8",
+		"name": "BuggyWebRegistrationTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15629258"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//actual status code\r",
+							"var actualCode = pm.response.code;\r",
+							"console.log(actualCode);\r",
+							"\r",
+							"//expected status code\r",
+							"var expectedCode = pm.iterationData.get(\"expectedCode\");\r",
+							"pm.collectionVariables.set('expectedCode',  expectedCode);\r",
+							"console.log(expectedCode);\r",
+							"\r",
+							"//expected return message\r",
+							"var expectedMessage = pm.iterationData.get(\"expectedMessage\");\r",
+							"pm.collectionVariables.set('expectedMessage',  expectedMessage);\r",
+							"\r",
+							"//compare/test actual and expected statu code\r",
+							"pm.test(\"Test case: \" + expectedMessage, function () {\r",
+							"    pm.expect(actualCode).to.equal(expectedCode);\r",
+							"});\r",
+							"\r",
+							"//compare/test actual and expected message\r",
+							"pm.test(\"Expected response message: \" + expectedMessage, function () {\r",
+							"    pm.expect(pm.response.text()).to.include(expectedMessage);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var username = pm.iterationData.get(\"username\");\r",
+							"var firstName = pm.iterationData.get(\"firstName\");\r",
+							"var lastName = pm.iterationData.get(\"lastName\");\r",
+							"var password = pm.iterationData.get(\"password\");\r",
+							"var confirmPassword = pm.iterationData.get(\"confirmPassword\");\r",
+							"\r",
+							"\r",
+							"pm.collectionVariables.set('username',  username);\r",
+							"pm.collectionVariables.set('firstName',  firstName);\r",
+							"pm.collectionVariables.set('lastName',  lastName);\r",
+							"pm.collectionVariables.set('password',  password);\r",
+							"pm.collectionVariables.set('confirmPassword', confirmPassword);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"username\": {{username}},\r\n    \"firstName\": {{firstName}},\r\n    \"lastName\": {{lastName}},\r\n    \"password\": {{password}},\r\n    \"confirmPassword\": {{confirmPassword}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://k51qryqov3.execute-api.ap-southeast-2.amazonaws.com/prod/users",
+					"protocol": "https",
+					"host": [
+						"k51qryqov3",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "username",
+			"value": ""
+		},
+		{
+			"key": "firstName",
+			"value": ""
+		},
+		{
+			"key": "lastName",
+			"value": ""
+		},
+		{
+			"key": "password",
+			"value": ""
+		},
+		{
+			"key": "confirmPassword",
+			"value": ""
+		},
+		{
+			"key": "expectedCode",
+			"value": ""
+		},
+		{
+			"key": "expectedMessage",
+			"value": ""
+		}
+	]
+}

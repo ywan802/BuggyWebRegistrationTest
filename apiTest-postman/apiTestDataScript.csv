@@ -1,0 +1,6 @@
+username,firstName,lastName,password,confirmPassword,expectedCode,expectedMessage,comment
+"""user100""","""firstName1""","""LastName1""","""Hello123.""","""Hello123.""",201,,valid password format
+"""user2""","""firstName2""","""LastName2""","""Hello123""","""Hello123""",400, Password must have symbol characters,invalid password format: no special character
+"""user4""","""firstName4""","""LastName4""","""hello123.""","""hello123.""",400, Password must have uppercase characters,invalid password format: no uppercase letter
+"""user5""","""firstName5""","""LastName5""","""HELLO123.""","""HELLO123.""",400, Password must have lowercase characters,invalid password format: no lowercase letter
+"""user7""","""firstName6""","""LastName6""","""Hello123.""","""Hello123.""",400,User already exists,cannot register: duplicated username/account
