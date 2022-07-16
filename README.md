@@ -7,7 +7,6 @@ The list of softwares need to install:
 
 The list of extensions need to use:
 1. SpecFlow for Visual Studio 2019
-2. SpecFlow.Assist.Dynamic
 3. Selenium.WebDriver
 
 ===================================================
